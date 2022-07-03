@@ -3,7 +3,7 @@ module github.com/dansusman/todoservice
 go 1.17
 
 require (
-	github.com/golang/protobuf v1.5.2
+	github.com/golang/protobuf v1.5.3-0.20210916003710-5d5e8c018a13
 	google.golang.org/grpc v1.47.0
 	google.golang.org/protobuf v1.28.0
 )

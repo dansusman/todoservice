@@ -8,8 +8,7 @@ import (
     "google.golang.org/grpc/codes"
     "google.golang.org/grpc/status"
 
-    "github.com/dansusman/todoservice/pkg/api/v1"
-
+    v1 "github.com/dansusman/todoservice/pkg/api/v1"
 )
 
 const (
@@ -18,12 +17,6 @@ const (
 
 type todoServiceServer struct {
     db *sql.DB
-}
-
-
-
-func NewTodoServiceServer(db *sql.DB) v1.TodoServiceServer {
-    return &todoServiceServer{db: db}
 }
 
 // check if the API version requested by client is supported by server!!

@@ -19,6 +19,11 @@ type todoServiceServer struct {
     db *sql.DB
 }
 
+// NewToDoServiceServer creates ToDo service
+func NewTodoServiceServer(db *sql.DB) v1.TodoServiceServer {
+	return &todoServiceServer{db: db}
+}
+
 // check if the API version requested by client is supported by server!!
 func (s *todoServiceServer) checkAPI(api string) error {
     if len(api) > 0 && apiVersion != api {
